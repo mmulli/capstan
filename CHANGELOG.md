@@ -5,6 +5,12 @@ Please track all notable changes in this file. This format is based on
 
 ## [Unreleased]
 
+## [0.0.5]
+
+### Changed
+
+- Refactored the ScalarT's supertraits to use well defined existing traits from the 'num_traits' crate as opposed to specifying each super trait in a granular way. It is now simply ScalarT: FloatCore + NumAssignOps + Debug. FloatCore is chosen over Float for clear compatibility with no-std though Float could be used if really needed in future with the libm feature.
+
 ## [0.0.4]
 
 ### Added
